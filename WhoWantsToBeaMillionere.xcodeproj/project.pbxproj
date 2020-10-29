@@ -16,6 +16,9 @@
 		347965272549DA8300932502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347965252549DA8300932502 /* LaunchScreen.storyboard */; };
 		347965322549DA8300932502 /* WhoWantsToBeaMillionereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347965312549DA8300932502 /* WhoWantsToBeaMillionereTests.swift */; };
 		3479653D2549DA8300932502 /* WhoWantsToBeaMillionereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479653C2549DA8300932502 /* WhoWantsToBeaMillionereUITests.swift */; };
+		3479654B2549EABF00932502 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479654A2549EABF00932502 /* Question.swift */; };
+		3479654D254AB28E00932502 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479654C254AB28E00932502 /* Game.swift */; };
+		3479654F254ACEDE00932502 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479654E254ACEDE00932502 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		347965382549DA8300932502 /* WhoWantsToBeaMillionereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhoWantsToBeaMillionereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3479653C2549DA8300932502 /* WhoWantsToBeaMillionereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoWantsToBeaMillionereUITests.swift; sourceTree = "<group>"; };
 		3479653E2549DA8300932502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3479654A2549EABF00932502 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		3479654C254AB28E00932502 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3479654E254ACEDE00932502 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				347965252549DA8300932502 /* LaunchScreen.storyboard */,
 				347965282549DA8300932502 /* Info.plist */,
 				347965202549DA8100932502 /* WhoWantsToBeaMillionere.xcdatamodeld */,
+				3479654A2549EABF00932502 /* Question.swift */,
+				3479654C254AB28E00932502 /* Game.swift */,
+				3479654E254ACEDE00932502 /* GameViewController.swift */,
 			);
 			path = WhoWantsToBeaMillionere;
 			sourceTree = "<group>";
@@ -262,6 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3479654F254ACEDE00932502 /* GameViewController.swift in Sources */,
+				3479654B2549EABF00932502 /* Question.swift in Sources */,
+				3479654D254AB28E00932502 /* Game.swift in Sources */,
 				3479651C2549DA8100932502 /* ViewController.swift in Sources */,
 				347965182549DA8100932502 /* AppDelegate.swift in Sources */,
 				347965222549DA8100932502 /* WhoWantsToBeaMillionere.xcdatamodeld in Sources */,
