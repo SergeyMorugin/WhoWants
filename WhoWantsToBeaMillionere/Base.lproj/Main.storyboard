@@ -30,7 +30,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="gP6-L9-ZNz" kind="modal" identifier="startGame" id="0nc-Bj-RhB"/>
+                                            <segue destination="gP6-L9-ZNz" kind="presentation" identifier="startGame" modalPresentationStyle="fullScreen" id="0nc-Bj-RhB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H17-Ec-G7d">
@@ -66,30 +66,21 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Record Table View Controller-->
         <scene sceneID="ekH-mG-T0M">
             <objects>
-                <tableViewController id="Al4-Yf-c35" sceneMemberID="viewController">
+                <tableViewController id="Al4-Yf-c35" customClass="RecordTableViewController" customModule="WhoWantsToBeaMillionere" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="y8l-8M-EQx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eef-d7-edQ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eef-d7-edQ" id="nv8-lV-0NC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Al4-Yf-c35" id="f5C-rG-3Fu"/>
                             <outlet property="delegate" destination="Al4-Yf-c35" id="xKq-xZ-fl9"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="lHp-Z8-kNB"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yR-50-spb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,11 +91,11 @@
             <objects>
                 <viewController id="gP6-L9-ZNz" customClass="GameViewController" customModule="WhoWantsToBeaMillionere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JJw-oo-QZx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="sZc-Kp-AsE">
-                                <rect key="frame" x="0.0" y="306" width="414" height="196.5"/>
+                                <rect key="frame" x="0.0" y="355" width="414" height="196.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is you name?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng8-n1-wVi">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
@@ -158,6 +149,8 @@
                         <viewLayoutGuide key="safeArea" id="A4j-rU-gm1"/>
                     </view>
                     <navigationItem key="navigationItem" id="C0u-zj-Cef"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="answer1Btn" destination="29z-00-UKs" id="oQ9-Dn-syw"/>
                         <outlet property="answer2Btn" destination="UYo-hw-OgG" id="9cm-2l-oQk"/>

@@ -19,6 +19,10 @@
 		3479654B2549EABF00932502 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479654A2549EABF00932502 /* Question.swift */; };
 		3479654D254AB28E00932502 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479654C254AB28E00932502 /* Game.swift */; };
 		3479654F254ACEDE00932502 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479654E254ACEDE00932502 /* GameViewController.swift */; };
+		34796551254AF12700932502 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34796550254AF12700932502 /* GameSession.swift */; };
+		34796553254AF60D00932502 /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34796552254AF60D00932502 /* RecordTableViewController.swift */; };
+		34796555254AF96900932502 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34796554254AF96900932502 /* RecordTableViewCell.swift */; };
+		34796557254AF97600932502 /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34796556254AF97600932502 /* RecordTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		3479654A2549EABF00932502 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		3479654C254AB28E00932502 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		3479654E254ACEDE00932502 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		34796550254AF12700932502 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		34796552254AF60D00932502 /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
+		34796554254AF96900932502 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordTableViewCell.swift; path = ../Cell/RecordTableViewCell.swift; sourceTree = "<group>"; };
+		34796556254AF97600932502 /* RecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecordTableViewCell.xib; path = ../Cell/RecordTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +115,12 @@
 		347965162549DA8100932502 /* WhoWantsToBeaMillionere */ = {
 			isa = PBXGroup;
 			children = (
+				3479655A254AF9A400932502 /* Game */,
+				34796558254AF97D00932502 /* Cells */,
 				347965172549DA8100932502 /* AppDelegate.swift */,
+				3479654A2549EABF00932502 /* Question.swift */,
+				3479654C254AB28E00932502 /* Game.swift */,
+				34796550254AF12700932502 /* GameSession.swift */,
 				347965192549DA8100932502 /* SceneDelegate.swift */,
 				3479651B2549DA8100932502 /* ViewController.swift */,
 				3479651D2549DA8100932502 /* Main.storyboard */,
@@ -115,9 +128,8 @@
 				347965252549DA8300932502 /* LaunchScreen.storyboard */,
 				347965282549DA8300932502 /* Info.plist */,
 				347965202549DA8100932502 /* WhoWantsToBeaMillionere.xcdatamodeld */,
-				3479654A2549EABF00932502 /* Question.swift */,
-				3479654C254AB28E00932502 /* Game.swift */,
 				3479654E254ACEDE00932502 /* GameViewController.swift */,
+				34796552254AF60D00932502 /* RecordTableViewController.swift */,
 			);
 			path = WhoWantsToBeaMillionere;
 			sourceTree = "<group>";
@@ -138,6 +150,22 @@
 				3479653E2549DA8300932502 /* Info.plist */,
 			);
 			path = WhoWantsToBeaMillionereUITests;
+			sourceTree = "<group>";
+		};
+		34796558254AF97D00932502 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				34796554254AF96900932502 /* RecordTableViewCell.swift */,
+				34796556254AF97600932502 /* RecordTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3479655A254AF9A400932502 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +274,7 @@
 			files = (
 				347965272549DA8300932502 /* LaunchScreen.storyboard in Resources */,
 				347965242549DA8300932502 /* Assets.xcassets in Resources */,
+				34796557254AF97600932502 /* RecordTableViewCell.xib in Resources */,
 				3479651F2549DA8100932502 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,10 +302,13 @@
 			files = (
 				3479654F254ACEDE00932502 /* GameViewController.swift in Sources */,
 				3479654B2549EABF00932502 /* Question.swift in Sources */,
+				34796551254AF12700932502 /* GameSession.swift in Sources */,
 				3479654D254AB28E00932502 /* Game.swift in Sources */,
 				3479651C2549DA8100932502 /* ViewController.swift in Sources */,
 				347965182549DA8100932502 /* AppDelegate.swift in Sources */,
 				347965222549DA8100932502 /* WhoWantsToBeaMillionere.xcdatamodeld in Sources */,
+				34796553254AF60D00932502 /* RecordTableViewController.swift in Sources */,
+				34796555254AF96900932502 /* RecordTableViewCell.swift in Sources */,
 				3479651A2549DA8100932502 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

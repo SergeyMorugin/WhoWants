@@ -110,23 +110,12 @@ class Game: GameDelegate {
     }
 }
 
-
-class GameSession {
-    var questionsCount: Int
-    var currentQuestionNum = 0
-    var finished: Bool = false
-    
-    init (questionsCount: Int){
-        self.questionsCount = questionsCount
-    }
-    
-}
-
 protocol GameDelegate {
     func checkAnswerAndContinueGame(answerNum: Int) -> Bool
     func currentQuestion() -> String
     func currentAnswers(_ byNum: Int) -> String
 }
+
 
 
     
