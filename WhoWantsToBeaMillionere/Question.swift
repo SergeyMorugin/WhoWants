@@ -13,3 +13,44 @@ struct Question{
     let answers: [String]
     let rightAnswer: Int
 }
+
+protocol QuestionSequenceStrategy {
+    func get(_ byNum: Int) -> Question?
+    func count() -> Int
+    init(qustions: [Question])
+    
+}
+
+class LineQuestionsSequence: QuestionSequenceStrategy{
+    private var questions: [Question]
+    
+    func get(_ byNum: Int) -> Question? {
+        return questions[byNum]
+    }
+    
+    required init(qustions: [Question]) {
+        self.questions = qustions
+    }
+    
+    func count() -> Int {
+        return questions.count
+    }
+}
+
+class RandomQuestionsSequence: QuestionSequenceStrategy{
+    private var questions: [Question]
+    private var randomSequence:[Int]
+    
+    func get(_ byNum: Int) -> Question? {
+        return questions[randomSequence[byNum]]
+    }
+    
+    required init(qustions: [Question]) {
+        self.questions = qustions
+        self.randomSequence = Array(0..<questions.count).shuffled()
+    }
+    
+    func count() -> Int {
+        return questions.count
+    }
+}

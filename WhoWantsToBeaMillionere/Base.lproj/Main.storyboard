@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="X62-EG-oh1">
-                                <rect key="frame" x="34" y="360" width="346.5" height="186.5"/>
+                                <rect key="frame" x="34" y="337.5" width="346.5" height="231.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who wants to be a Millionere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C57-9k-quh">
                                         <rect key="frame" x="0.0" y="0.0" width="346.5" height="31.5"/>
@@ -42,8 +42,17 @@
                                             <segue destination="Al4-Yf-c35" kind="show" id="Y4Y-o6-ZvF"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFm-Wy-yHL">
+                                        <rect key="frame" x="98.5" y="136.5" width="149" height="30"/>
+                                        <state key="normal" title="Set qustion sequence">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="mau-g9-nyY" kind="show" identifier="setSequenceSegue" id="Ed6-7Y-X8c"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqA-iI-VDa">
-                                        <rect key="frame" x="148" y="136.5" width="50" height="50"/>
+                                        <rect key="frame" x="148" y="181.5" width="50" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -65,6 +74,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yaj-Fc-Hu6">
+            <objects>
+                <viewController id="mau-g9-nyY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gVA-Q1-6an">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gHJ-QO-ZJN">
+                                <rect key="frame" x="105.5" y="391" width="203" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEr-qU-8so">
+                                        <rect key="frame" x="0.0" y="0.0" width="203" height="30"/>
+                                        <state key="normal" title="Line Questions Sequence"/>
+                                        <connections>
+                                            <segue destination="7Zv-20-k6u" kind="unwind" unwindAction="lineSequenceUnwindActionWithUnwindSegue:" id="UbJ-2T-Bdo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pan-Zj-3fw">
+                                        <rect key="frame" x="0.0" y="30" width="203" height="30"/>
+                                        <state key="normal" title="Random Questions Sequence"/>
+                                        <connections>
+                                            <action selector="goBack" destination="a2N-TN-gbl" eventType="touchUpInside" id="1Qe-Fn-kqt"/>
+                                            <segue destination="7Zv-20-k6u" kind="unwind" unwindAction="randomSequenceUnwindActionWithUnwindSegue:" id="YR5-A1-vhi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gHJ-QO-ZJN" firstAttribute="centerX" secondItem="gVA-Q1-6an" secondAttribute="centerX" id="Rb7-0k-7QJ"/>
+                            <constraint firstItem="gHJ-QO-ZJN" firstAttribute="centerY" secondItem="gVA-Q1-6an" secondAttribute="centerY" id="YLb-to-rVS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UrE-j0-oRR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0La-yM-GW2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2N-TN-gbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7Zv-20-k6u" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="963"/>
         </scene>
         <!--Record Table View Controller-->
         <scene sceneID="ekH-mG-T0M">

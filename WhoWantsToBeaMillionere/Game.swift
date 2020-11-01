@@ -15,42 +15,16 @@ class Game: GameDelegate {
         
     }
     
-    private let questions: [Question]? = [
-        Question(question: "A magnet would most likely attract which of the following?", answers: [
-            "Metal", "Plastic", "Wood", "The wrong man"
-        ], rightAnswer: 0),
-        Question(question: "Where did Scotch whisky originate?", answers: [
-            "Ireland", "Wales", "The United States", "Scotland"
-        ], rightAnswer: 3),
-        Question(question: "In fancy hotels, it is traditional for what tantalizing treat to be left on your pillow?", answers: [
-            "A pretzel", "An apple", "A mint", "A photo of Wolf Blitzer"
-        ], rightAnswer: 2),
-        Question(question: "In the United States, what is traditionally the proper way to address a judge?", answers: [
-            "Your holiness", "Your honor", "Your eminence", "You da man!"
-        ], rightAnswer: 1),
-        Question(question: "The popular children's song 'It's Raining, It's Pouring' mentions an 'old man' doing what?", answers: [
-            "Snoring", "Cooking", "Laughing", "Yelling at squirrels"
-        ], rightAnswer: 0),
-        Question(question: "If someone asked to see your ID, what might you show them?", answers: [
-            "Your tongue", "Your teeth", "Your passport", "The door"
-        ], rightAnswer: 2),
-        Question(question: "Where did Scotch whisky originate?", answers: [
-            "Ireland", "Wales", "The United States", "Scotland"
-        ], rightAnswer: 3),
-        Question(question: "Where did Scotch whisky originate?", answers: [
-            "Ireland", "Wales", "The United States", "Scotland"
-        ], rightAnswer: 3),
-        Question(question: "Where did Scotch whisky originate?", answers: [
-            "Ireland", "Wales", "The United States", "Scotland"
-        ], rightAnswer: 3)
-    ]
-    
     var gameSession: GameSession?
-    var onGameEnd: (() -> Void)?
+    private var onGameEnd: (() -> Void)?
+    private var questionSequence: QuestionSequenceStrategy!
     
+    func setQuestionSequence(_ sequence: QuestionSequenceStrategy){
+        self.questionSequence = sequence
+    }
     
     func startGame(onGameEnd: (() -> Void)? ){
-        gameSession = GameSession(questionsCount: questions!.count)
+        gameSession = GameSession(questionsCount: questionSequence.count())
         self.onGameEnd = onGameEnd
     }
     
@@ -69,12 +43,13 @@ class Game: GameDelegate {
     func checkAnswerAndContinueGame(answerNum: Int) -> Bool{
         guard
             let gameSession = gameSession,
-            let questions = questions,
+            let question = questionSequence.get(gameSession.currentQuestionNum),
             !gameSession.finished
         else {
             return false
         }
-        if (questions[gameSession.currentQuestionNum].rightAnswer == answerNum){
+        
+        if (question.rightAnswer == answerNum){
             gameSession.currentQuestionNum = gameSession.currentQuestionNum + 1
         } else {
             finishGame()
@@ -90,23 +65,23 @@ class Game: GameDelegate {
     func currentQuestion() -> String {
         guard
             let gameSession = gameSession,
-            let questions = questions
+            let question = questionSequence.get(gameSession.currentQuestionNum)
         else {
             return ""
         }
-        return questions[gameSession.currentQuestionNum].question
+        return question.question
     }
     
     func currentAnswers(_ byNum: Int) -> String {
         guard
             let gameSession = gameSession,
-            let questions = questions,
+            let question = questionSequence.get(gameSession.currentQuestionNum),
             byNum >= 0,
-            byNum < questions[gameSession.currentQuestionNum].answers.count
+            byNum < question.answers.count
         else {
             return ""
         }
-        return questions[gameSession.currentQuestionNum].answers[byNum]
+        return question.answers[byNum]
     }
 }
 
