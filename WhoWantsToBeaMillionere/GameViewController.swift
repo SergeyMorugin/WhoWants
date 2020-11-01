@@ -16,12 +16,19 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answer2Btn: UIButton!
     @IBOutlet weak var answer3Btn: UIButton!
     @IBOutlet weak var answer4Btn: UIButton!
+    @IBOutlet weak var processLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
          updatePage()
         // Do any additional setup after loading the view.
+
+        Game.shared.gameSession!.currentQuestionNum.addObserver(self, options: [.initial, .new, .old]) { [weak self] value, change in
+            print("name changed. change = \(change), name = \(value)")
+            self?.processLabel.text = "\(value+1) - \(value*100/Game.shared.gameSession!.questionsCount)%"
+        }
     }
+    
     
     func updatePage(){
         questionLabel.text = delegate.currentQuestion()

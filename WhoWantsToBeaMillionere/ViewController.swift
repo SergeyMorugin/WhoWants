@@ -56,8 +56,8 @@ class MainViewController: UIViewController {
         case "startGame":
             guard let destination = segue.destination as? GameViewController else { return }
             Game.shared.startGame { [weak self] in
-                self?.lastGameResultLabel.text = "Previus result is \(Game.shared.gameSession!.currentQuestionNum)/\(Game.shared.gameSession!.questionsCount)"
-                let percent = Int(Game.shared.gameSession!.currentQuestionNum*100/Game.shared.gameSession!.questionsCount)
+                self?.lastGameResultLabel.text = "Previus result is \(Game.shared.gameSession!.currentQuestionNum.value)/\(Game.shared.gameSession!.questionsCount)"
+                let percent = Int(Game.shared.gameSession!.currentQuestionNum.value*100/Game.shared.gameSession!.questionsCount)
                 RecordsCaretaker.shared.append(Record(date: Date(), value: percent))
             }
             destination.delegate = Game.shared

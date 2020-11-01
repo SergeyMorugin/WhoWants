@@ -147,16 +147,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="sZc-Kp-AsE">
-                                <rect key="frame" x="0.0" y="355" width="414" height="196.5"/>
+                                <rect key="frame" x="0.0" y="319.5" width="414" height="267"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is you name?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng8-n1-wVi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sQ-jE-lUv">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is you name?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng8-n1-wVi">
+                                        <rect key="frame" x="0.0" y="70.5" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="baf-PG-fRe">
-                                        <rect key="frame" x="0.0" y="70.5" width="414" height="126"/>
+                                        <rect key="frame" x="0.0" y="141" width="414" height="126"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="0" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29z-00-UKs">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
@@ -208,6 +214,7 @@
                         <outlet property="answer2Btn" destination="UYo-hw-OgG" id="9cm-2l-oQk"/>
                         <outlet property="answer3Btn" destination="jme-Mi-rK0" id="hLO-mn-5gs"/>
                         <outlet property="answer4Btn" destination="ow3-2E-P3X" id="j9X-Gk-r55"/>
+                        <outlet property="processLabel" destination="3sQ-jE-lUv" id="hOz-8y-m5r"/>
                         <outlet property="questionLabel" destination="ng8-n1-wVi" id="utF-w4-zU3"/>
                     </connections>
                 </viewController>

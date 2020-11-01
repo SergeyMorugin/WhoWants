@@ -10,11 +10,16 @@ import Foundation
 
 class GameSession {
     var questionsCount: Int
-    var currentQuestionNum = 0
+    var currentQuestionNum: Observable<Int>
     var finished: Bool = false
     
     init (questionsCount: Int){
         self.questionsCount = questionsCount
+        self.currentQuestionNum = Observable(0)
+    }
+    
+    deinit {
+        currentQuestionNum.removeObservers()
     }
     
 }

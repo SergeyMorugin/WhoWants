@@ -38,24 +38,25 @@ class Game: GameDelegate {
         gameSession.finished = true
         onGameEnd?()
         self.gameSession = nil
+        
     }
     
     func checkAnswerAndContinueGame(answerNum: Int) -> Bool{
         guard
             let gameSession = gameSession,
-            let question = questionSequence.get(gameSession.currentQuestionNum),
+            let question = questionSequence.get(gameSession.currentQuestionNum.value),
             !gameSession.finished
         else {
             return false
         }
         
         if (question.rightAnswer == answerNum){
-            gameSession.currentQuestionNum = gameSession.currentQuestionNum + 1
+            gameSession.currentQuestionNum.value = gameSession.currentQuestionNum.value + 1
         } else {
             finishGame()
             return false
         }
-        if (gameSession.currentQuestionNum == gameSession.questionsCount){
+        if (gameSession.currentQuestionNum.value == gameSession.questionsCount){
             finishGame()
             return false
         }
@@ -65,7 +66,7 @@ class Game: GameDelegate {
     func currentQuestion() -> String {
         guard
             let gameSession = gameSession,
-            let question = questionSequence.get(gameSession.currentQuestionNum)
+            let question = questionSequence.get(gameSession.currentQuestionNum.value)
         else {
             return ""
         }
@@ -75,7 +76,7 @@ class Game: GameDelegate {
     func currentAnswers(_ byNum: Int) -> String {
         guard
             let gameSession = gameSession,
-            let question = questionSequence.get(gameSession.currentQuestionNum),
+            let question = questionSequence.get(gameSession.currentQuestionNum.value),
             byNum >= 0,
             byNum < question.answers.count
         else {

@@ -23,6 +23,7 @@
 		34796553254AF60D00932502 /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34796552254AF60D00932502 /* RecordTableViewController.swift */; };
 		34796555254AF96900932502 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34796554254AF96900932502 /* RecordTableViewCell.swift */; };
 		34796557254AF97600932502 /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34796556254AF97600932502 /* RecordTableViewCell.xib */; };
+		3479655E254F0A0400932502 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479655D254F0A0400932502 /* Observer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		34796552254AF60D00932502 /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 		34796554254AF96900932502 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordTableViewCell.swift; path = ../Cell/RecordTableViewCell.swift; sourceTree = "<group>"; };
 		34796556254AF97600932502 /* RecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecordTableViewCell.xib; path = ../Cell/RecordTableViewCell.xib; sourceTree = "<group>"; };
+		3479655D254F0A0400932502 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				347965202549DA8100932502 /* WhoWantsToBeaMillionere.xcdatamodeld */,
 				3479654E254ACEDE00932502 /* GameViewController.swift */,
 				34796552254AF60D00932502 /* RecordTableViewController.swift */,
+				3479655D254F0A0400932502 /* Observer.swift */,
 			);
 			path = WhoWantsToBeaMillionere;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				347965182549DA8100932502 /* AppDelegate.swift in Sources */,
 				347965222549DA8100932502 /* WhoWantsToBeaMillionere.xcdatamodeld in Sources */,
 				34796553254AF60D00932502 /* RecordTableViewController.swift in Sources */,
+				3479655E254F0A0400932502 /* Observer.swift in Sources */,
 				34796555254AF96900932502 /* RecordTableViewCell.swift in Sources */,
 				3479651A2549DA8100932502 /* SceneDelegate.swift in Sources */,
 			);
