@@ -24,7 +24,6 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         Game.shared.gameSession!.currentQuestionNum.addObserver(self, options: [.initial, .new, .old]) { [weak self] value, change in
-            print("name changed. change = \(change), name = \(value)")
             self?.processLabel.text = "\(value+1) - \(value*100/Game.shared.gameSession!.questionsCount)%"
         }
     }

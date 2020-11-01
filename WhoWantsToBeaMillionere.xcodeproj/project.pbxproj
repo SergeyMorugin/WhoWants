@@ -24,6 +24,7 @@
 		34796555254AF96900932502 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34796554254AF96900932502 /* RecordTableViewCell.swift */; };
 		34796557254AF97600932502 /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34796556254AF97600932502 /* RecordTableViewCell.xib */; };
 		3479655E254F0A0400932502 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479655D254F0A0400932502 /* Observer.swift */; };
+		34796560254F191E00932502 /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479655F254F191E00932502 /* AddQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		34796554254AF96900932502 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordTableViewCell.swift; path = ../Cell/RecordTableViewCell.swift; sourceTree = "<group>"; };
 		34796556254AF97600932502 /* RecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecordTableViewCell.xib; path = ../Cell/RecordTableViewCell.xib; sourceTree = "<group>"; };
 		3479655D254F0A0400932502 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		3479655F254F191E00932502 /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				3479654E254ACEDE00932502 /* GameViewController.swift */,
 				34796552254AF60D00932502 /* RecordTableViewController.swift */,
 				3479655D254F0A0400932502 /* Observer.swift */,
+				3479655F254F191E00932502 /* AddQuestionViewController.swift */,
 			);
 			path = WhoWantsToBeaMillionere;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				3479654F254ACEDE00932502 /* GameViewController.swift in Sources */,
 				3479654B2549EABF00932502 /* Question.swift in Sources */,
+				34796560254F191E00932502 /* AddQuestionViewController.swift in Sources */,
 				34796551254AF12700932502 /* GameSession.swift in Sources */,
 				3479654D254AB28E00932502 /* Game.swift in Sources */,
 				3479651C2549DA8100932502 /* ViewController.swift in Sources */,
